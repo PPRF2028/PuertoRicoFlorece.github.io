@@ -1,109 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Partido Puerto Rico Florece — Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.">
-  <title>Partido Puerto Rico Florece</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partido Puerto Rico Florece</title>
+<meta name="description" content="Partido Puerto Rico Florece — Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.">
+<style>
+:root{--pink:#e50083;--purple:#4d1795;--gold:#d7b54a;--ink:#24133f;--soft:#f8f4fc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+.top{background:var(--pink);color:#fff;text-align:center;font-weight:700;padding:9px 18px;font-size:14px}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 3px 18px #32116f1c}
+.nav{max-width:1280px;margin:auto;display:flex;align-items:center;gap:25px;padding:10px 22px}
+.logo{width:230px;height:82px;object-fit:contain;flex:0 0 auto}
+nav{margin-left:auto;display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+nav a{color:var(--purple);text-decoration:none;font-size:12px;font-weight:800;text-transform:uppercase}
+nav a:hover{color:var(--pink)}
+.hero{min-height:620px;background:linear-gradient(120deg,#f7e9f5 0%,#fff 48%,#d9f3fb 100%);position:relative;overflow:hidden;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 30%,#fff 0 13%,transparent 35%),radial-gradient(circle at 92% 20%,#fff8 0 10%,transparent 34%)}
+.hero-inner{position:relative;z-index:2;max-width:1250px;margin:auto;width:100%;display:grid;grid-template-columns:1fr 1.35fr 1fr;align-items:center;gap:25px;padding:55px 30px}
+.flower{width:100%;max-width:360px;margin:auto;border-radius:28px;overflow:hidden;box-shadow:0 18px 45px #32116f20;border:7px solid #fff}
+.flower img{display:block;width:100%;height:290px;object-fit:cover}
+.center{text-align:center;background:#ffffffdd;border-radius:30px;padding:28px 25px;box-shadow:0 15px 45px #32116f14}
+.center .hero-logo{width:min(430px,100%);height:185px;object-fit:contain}
+h1{font-family:Georgia,serif;font-size:44px;color:var(--purple);margin:8px 0 12px;font-style:italic}
+.lead{font-size:18px;line-height:1.6;margin:0 auto 22px;max-width:650px}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;display:inline-block}
+.btn.pink{background:var(--pink);color:#fff}.btn.outline{border:2px solid var(--purple);color:var(--purple);background:#fff}
+.pr{height:290px;max-width:360px;width:100%;margin:auto;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(#52b9e4 0 56%,#55a553 56% 100%);box-shadow:0 18px 45px #32116f20}
+.pr:before{content:"";position:absolute;width:180px;height:120px;background:#fff;left:45px;top:80px;clip-path:polygon(0 0,100% 50%,0 100%);opacity:.95}
+.pr:after{content:"";position:absolute;width:95px;height:95px;background:#e60012;left:93px;top:92px;clip-path:polygon(0 20%,100% 50%,0 80%);opacity:.9}
+.pr span{position:absolute;right:22px;top:18px;color:var(--purple);font-size:48px;font-weight:900;transform:rotate(-7deg)}
+.section{padding:75px 25px}.section.soft{background:var(--soft)}
+.wrap{max-width:1200px;margin:auto}.title{text-align:center;color:var(--purple);font-size:34px;margin:0 0 12px}.subtitle{text-align:center;max-width:800px;margin:0 auto 38px;line-height:1.6;color:#5d4a70}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 28px #32116f12;border:1px solid #eee3fa}.card .ico{font-size:38px}.card h3{color:var(--purple);margin:10px 0}.card p{line-height:1.6}.card a{color:var(--pink);font-weight:800;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.tile{padding:27px;border-radius:18px;background:#fff;border-top:5px solid var(--pink);box-shadow:0 8px 25px #32116f12}.tile h3{color:var(--purple);margin:8px 0}.tile p{line-height:1.55}.tile a{color:var(--pink);font-weight:800;text-decoration:none}
+.institution{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}.institution img{width:100%;height:360px;object-fit:cover;border-radius:24px}.institution p{font-size:18px;line-height:1.7}.list{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;list-style:none}.list li:before{content:"🌺";margin-right:9px}
+.participate{background:linear-gradient(120deg,var(--purple),#6b29b2);color:#fff;text-align:center;border-radius:28px;padding:55px 25px}.participate h2{font-size:36px;margin:0 0 12px}.participate p{max-width:750px;margin:0 auto 25px;line-height:1.6}
+footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlogo{width:250px;height:95px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:12px}.gold{color:#f0d46e}
+@media(max-width:950px){.nav{flex-direction:column}.logo{width:260px}nav{margin:auto;justify-content:center}.hero-inner{grid-template-columns:1fr}.flower,.pr{max-width:500px}.cards,.grid{grid-template-columns:1fr}.institution{grid-template-columns:1fr}.center{order:-1}h1{font-size:34px}.section{padding:55px 18px}}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <div>Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.</div>
-    <div class="social">f&nbsp;&nbsp; ◎ &nbsp;&nbsp;𝕏&nbsp;&nbsp; ▶&nbsp;&nbsp; ✉</div>
-  </div>
+<div class="top">Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.</div>
+<header><div class="nav">
+<img class="logo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece">
+<nav>
+<a href="#inicio">Inicio</a><a href="#quienes">Quiénes somos</a><a href="#propuestas">Propuestas</a><a href="#principios">Principios</a><a href="#organizacion">Organización</a><a href="#municipios">Municipios</a><a href="#noticias">Noticias</a><a href="#documentos">Documentos</a><a href="#participa">Participa</a><a href="#contacto">Contacto</a>
+</nav></div></header>
 
-  <header class="header">
-    <a class="brand" href="#inicio" aria-label="Partido Puerto Rico Florece">
-      <img src="assets/logo-oficial.jpg" alt="Logotipo oficial Partido Puerto Rico Florece">
-    </a>
-    <nav>
-      <a class="active" href="#inicio">Inicio</a>
-      <a href="#quienes">Quiénes somos</a>
-      <a href="#propuestas">Propuestas</a>
-      <a href="#principios">Principios</a>
-      <a href="#organizacion">Organización</a>
-      <a href="#municipios">Municipios</a>
-      <a href="#noticias">Noticias</a>
-      <a href="#documentos">Documentos</a>
-      <a href="#participa">Participa</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+<main id="inicio">
+<section class="hero"><div class="hero-inner">
+<div class="flower"><img src="flor-de-maga.png" alt="Flor de Maga"></div>
+<div class="center"><img class="hero-logo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece"><h1>Una nueva visión para Puerto Rico</h1><p class="lead">Un Puerto Rico que florece con esperanza, trabajo, justicia, transparencia y oportunidades para todos.</p><div class="buttons"><a class="btn pink" href="#propuestas">Conoce nuestro proyecto</a><a class="btn outline" href="#participa">Participa</a></div></div>
+<div class="pr"><span>PR</span></div>
+</div></section>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="hero-flower">
-        <img src="assets/flor-de-maga.png" alt="Flor de maga">
-      </div>
-      <div class="hero-content">
-        <img class="hero-logo" src="assets/logo-oficial.jpg" alt="Partido Puerto Rico Florece">
-        <h1>Una nueva visión para Puerto Rico</h1>
-        <p>Un Puerto Rico que florece con esperanza, trabajo, justicia, transparencia y oportunidades para todos.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#propuestas">Conoce nuestro proyecto</a>
-          <a class="btn secondary" href="#participa">Participa</a>
-        </div>
-      </div>
-      <div class="hero-pr">
-        <div class="sky"></div>
-        <div class="flag">🇵🇷</div>
-      </div>
-    </section>
+<section id="quienes" class="section"><div class="wrap"><h2 class="title">Partido Puerto Rico Florece</h2><p class="subtitle">Una propuesta política e institucional centrada en el servicio al pueblo, la transparencia, las oportunidades y el fortalecimiento de Puerto Rico.</p>
+<div class="cards"><article class="card"><div class="ico">🌺</div><h3>Nuestra visión</h3><p>Un Puerto Rico moderno, próspero, seguro y con instituciones eficientes al servicio de la ciudadanía.</p></article>
+<article class="card"><div class="ico">🤝</div><h3>Nuestro compromiso</h3><p>Trabajar por una transformación responsable de Puerto Rico, fortaleciendo sus comunidades e instituciones.</p></article>
+<article class="card"><div class="ico">👥</div><h3>Participación ciudadana</h3><p>El futuro de Puerto Rico se construye con la participación activa de su gente.</p></article></div></div></section>
 
-    <section class="three-cards">
-      <article><div class="icon">🌺</div><h2>Nuestra visión</h2><p>Un Puerto Rico moderno, próspero, seguro y con instituciones eficientes al servicio de la ciudadanía.</p><a href="#quienes">Conoce más →</a></article>
-      <article><div class="icon">🤝</div><h2>Nuestro compromiso</h2><p>Trabajar por una transformación responsable de Puerto Rico, fortaleciendo sus comunidades e instituciones.</p><a href="#principios">Conoce más →</a></article>
-      <article><div class="icon">👥</div><h2>Participa</h2><p>El futuro de Puerto Rico se construye con la participación de su gente.</p><a href="#participa">Únete al proyecto →</a></article>
-    </section>
+<section id="propuestas" class="section soft"><div class="wrap"><h2 class="title">Áreas principales del proyecto</h2><p class="subtitle">Conoce las áreas que formarán parte del portal oficial y de la plataforma programática.</p>
+<div class="grid">
+<article class="tile"><h3>📜 Reforma Constitucional</h3><p>Propuesta para transformar la Asamblea Legislativa en una legislatura unicameral.</p><a href="#documentos">Ver propuesta →</a></article>
+<article class="tile"><h3>📚 Biblioteca Digital</h3><p>Acceso organizado a documentos, tomos, reglamentos y estudios oficiales.</p><a href="#documentos">Ver documentos →</a></article>
+<article class="tile" id="municipios"><h3>📍 Municipios</h3><p>Un espacio para presentar proyectos y prioridades de cada municipio de Puerto Rico.</p><a href="#municipios">Explorar →</a></article>
+<article class="tile" id="organizacion"><h3>👥 Organización</h3><p>Estructura, comités, responsabilidades y participación dentro del partido.</p><a href="#organizacion">Conocer →</a></article>
+<article class="tile" id="noticias"><h3>📣 Noticias</h3><p>Comunicados, actividades, anuncios y novedades del Partido Puerto Rico Florece.</p><a href="#noticias">Ver noticias →</a></article>
+<article class="tile"><h3>📅 Calendario</h3><p>Próximamente: reuniones, actividades y eventos en Puerto Rico.</p><a href="#participa">Participar →</a></article>
+</div></div></section>
 
-    <section class="tiles" id="propuestas">
-      <article><span>📜</span><h3>Propuesta de Reforma Constitucional</h3><p>Transformación de la Asamblea Legislativa en una legislatura unicameral.</p><a href="#documentos">Ver más →</a></article>
-      <article id="documentos"><span>📚</span><h3>Biblioteca Digital</h3><p>Documentos oficiales, tomos, reglamentos y plataforma de gobierno.</p><a href="#documentos">Ver más →</a></article>
-      <article id="municipios"><span>📍</span><h3>Puerto Rico Florece por Municipios</h3><p>Propuestas y proyectos para cada municipio de nuestra isla.</p><a href="#municipios">Ver más →</a></article>
-      <article id="organizacion"><span>👥</span><h3>Organización</h3><p>Estructura, comités y equipo del Partido Puerto Rico Florece.</p><a href="#organizacion">Ver más →</a></article>
-      <article id="noticias"><span>📣</span><h3>Noticias y Comunicados</h3><p>Actividades, anuncios, logros y próximos eventos.</p><a href="#noticias">Ver más →</a></article>
-      <article><span>📅</span><h3>Calendario</h3><p>Eventos, reuniones y actividades en todo Puerto Rico.</p><a href="#participa">Ver más →</a></article>
-    </section>
+<section id="principios" class="section"><div class="wrap institution"><img src="flor-de-maga.png" alt="Flor de Maga"><div><h2 class="title" style="text-align:left">Nuestra propuesta institucional</h2><p>Un gobierno al servicio del pueblo, con instituciones fuertes, transparentes y eficientes, que impulse el desarrollo económico, la educación, la salud, la seguridad y la justicia.</p><ul class="list"><li>Educación de excelencia</li><li>Salud y bienestar</li><li>Seguridad ciudadana</li><li>Desarrollo económico</li><li>Infraestructura moderna</li><li>Medio ambiente y sostenibilidad</li></ul></div></div></section>
 
-    <section class="institutional" id="principios">
-      <div class="flower-panel"><img src="assets/flor-de-maga.png" alt="Flor de maga"></div>
-      <div class="institutional-text">
-        <h2>Nuestra propuesta institucional</h2>
-        <p>Un gobierno al servicio del pueblo, con instituciones fuertes, transparentes y eficientes, que impulse el desarrollo económico, la educación, la salud, la seguridad y la justicia social.</p>
-        <a class="btn primary" href="#propuestas">Ver propuestas →</a>
-      </div>
-      <ul>
-        <li>Educación de excelencia</li>
-        <li>Salud y bienestar</li>
-        <li>Seguridad ciudadana</li>
-        <li>Desarrollo económico</li>
-        <li>Infraestructura moderna</li>
-        <li>Medio ambiente y sostenibilidad</li>
-      </ul>
-    </section>
+<section id="documentos" class="section soft"><div class="wrap"><h2 class="title">Documentos y transparencia</h2><p class="subtitle">Esta sección será el centro documental del partido: propuestas, reglamentos, estudios, informes y publicaciones.</p><div class="participate"><h2>Una plataforma abierta al pueblo</h2><p>Queremos que la ciudadanía pueda conocer nuestras ideas, estudiar nuestras propuestas y participar en el desarrollo del proyecto.</p><a class="btn pink" href="#participa">Participa</a></div></div></section>
 
-    <section class="content-section" id="quienes">
-      <h2>Quiénes somos</h2>
-      <p>Partido Puerto Rico Florece presenta una visión institucional orientada al servicio público, la transparencia, las oportunidades y el fortalecimiento de Puerto Rico.</p>
-    </section>
+<section id="participa" class="section"><div class="wrap"><div class="participate"><h2>Construyamos juntos el Puerto Rico que queremos</h2><p>Próximamente añadiremos el formulario oficial de participación, registro de voluntarios y canales de comunicación.</p><a class="btn pink" href="#contacto">Quiero participar</a></div></div></section>
 
-    <section class="content-section" id="participa">
-      <h2>Participa</h2>
-      <p>Conoce el proyecto, participa en las actividades y mantente informado sobre las iniciativas de Puerto Rico Florece.</p>
-      <a class="btn primary" href="#contacto">Quiero participar</a>
-    </section>
-
-    <section class="content-section" id="contacto">
-      <h2>Contacto</h2>
-      <p>Próximamente añadiremos aquí el formulario oficial de contacto, correo electrónico y enlaces a las redes sociales.</p>
-    </section>
-  </main>
-
-  <footer>
-    <img src="assets/logo-oficial.jpg" alt="Partido Puerto Rico Florece">
-    <p>Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.</p>
-    <div>© 2026 Partido Puerto Rico Florece · Términos · Política de privacidad · Contacto</div>
-  </footer>
+<section id="contacto" class="section soft"><div class="wrap"><h2 class="title">Contacto</h2><p class="subtitle">Esta sección está preparada para incorporar el correo electrónico oficial, teléfono, redes sociales y formulario de contacto.</p></div></section>
+</main>
+<footer><img class="footlogo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece"><p>Floreciendo Unidos por un Puerto Rico de <span class="gold">Oportunidades, Justicia y Esperanza.</span></p><small>© 2026 Partido Puerto Rico Florece</small></footer>
 </body>
 </html>
