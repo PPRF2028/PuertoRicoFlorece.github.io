@@ -27,10 +27,16 @@ h1{font-family:Georgia,serif;font-size:44px;color:var(--purple);margin:8px 0 12p
 .buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;display:inline-block}
 .btn.pink{background:var(--pink);color:#fff}.btn.outline{border:2px solid var(--purple);color:var(--purple);background:#fff}
-.pr{height:290px;max-width:360px;width:100%;margin:auto;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(#52b9e4 0 56%,#55a553 56% 100%);box-shadow:0 18px 45px #32116f20}
-.pr:before{content:"";position:absolute;width:180px;height:120px;background:#fff;left:45px;top:80px;clip-path:polygon(0 0,100% 50%,0 100%);opacity:.95}
-.pr:after{content:"";position:absolute;width:95px;height:95px;background:#e60012;left:93px;top:92px;clip-path:polygon(0 20%,100% 50%,0 80%);opacity:.9}
-.pr span{position:absolute;right:22px;top:18px;color:var(--purple);font-size:48px;font-weight:900;transform:rotate(-7deg)}
+.pr{height:430px;max-width:390px;width:100%;margin:auto;border-radius:28px;overflow:hidden;position:relative;background:#123;box-shadow:0 18px 45px #32116f30;border:7px solid #fff}
+.pr .morro{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pr .shade{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 42%,#24133f9c 100%)}
+.pr .flag{position:absolute;right:18px;top:18px;width:150px;height:100px;filter:drop-shadow(0 5px 8px #0007)}
+.pr .flag .stripe{position:absolute;left:0;right:0;height:20px;background:#fff}
+.pr .flag .s1{top:0}.pr .flag .s2{top:40px}.pr .flag .s3{top:80px}
+.pr .flag .red{position:absolute;left:0;right:0;height:20px;background:#ed1c24;top:20px;box-shadow:0 40px 0 #ed1c24}
+.pr .flag .triangle{position:absolute;left:0;top:0;border-top:50px solid transparent;border-bottom:50px solid transparent;border-left:72px solid #75bde7;z-index:2}
+.pr .flag .star{position:absolute;left:22px;top:38px;color:#fff;font-size:25px;z-index:3}
+.pr .caption{position:absolute;left:22px;right:22px;bottom:20px;color:#fff;font-size:16px;font-weight:800;text-align:center;text-shadow:0 2px 5px #000}
 .section{padding:75px 25px}.section.soft{background:var(--soft)}
 .wrap{max-width:1200px;margin:auto}.title{text-align:center;color:var(--purple);font-size:34px;margin:0 0 12px}.subtitle{text-align:center;max-width:800px;margin:0 auto 38px;line-height:1.6;color:#5d4a70}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 28px #32116f12;border:1px solid #eee3fa}.card .ico{font-size:38px}.card h3{color:var(--purple);margin:10px 0}.card p{line-height:1.6}.card a{color:var(--pink);font-weight:800;text-decoration:none}
@@ -53,7 +59,15 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
 <section class="hero"><div class="hero-inner">
 <div class="flower"><img src="flor-de-maga.png" alt="Flor de Maga"></div>
 <div class="center"><img class="hero-logo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece"><h1>Una nueva visión para Puerto Rico</h1><p class="lead">Un Puerto Rico que florece con esperanza, trabajo, justicia, transparencia y oportunidades para todos.</p><div class="buttons"><a class="btn pink" href="#propuestas">Conoce nuestro proyecto</a><a class="btn outline" href="#participa">Participa</a></div></div>
-<div class="pr"><span>PR</span></div>
+<div class="pr">
+<img class="morro" src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Castillo San Felipe del Morro, San Juan, Puerto Rico">
+<div class="shade"></div>
+<div class="flag" aria-label="Bandera de Puerto Rico">
+<span class="stripe s1"></span><span class="stripe s2"></span><span class="stripe s3"></span>
+<span class="red"></span><span class="triangle"></span><span class="star">★</span>
+</div>
+<div class="caption">Castillo San Felipe del Morro<br>San Juan, Puerto Rico</div>
+</div>
 </div></section>
 
 <section id="quienes" class="section"><div class="wrap"><h2 class="title">Partido Puerto Rico Florece</h2><p class="subtitle">Una propuesta política e institucional centrada en el servicio al pueblo, la transparencia, las oportunidades y el fortalecimiento de Puerto Rico.</p>
