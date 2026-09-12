@@ -349,7 +349,15 @@ Yauco
   </div>
 </div>
 function mostrarMunicipio(municipio) {
+  function mostrarMunicipio(municipio) {
   if (municipio === "Adjuntas") {
+    document.getElementById("ficha-municipio").style.display = "block";
+  }
+}
+
+function cerrarFicha() {
+  document.getElementById("ficha-municipio").style.display = "none";
+}
     alert(
       "ADJUNTAS — PERFIL MUNICIPAL\n\n" +
       "📍 Información general\n" +
