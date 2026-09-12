@@ -352,7 +352,15 @@ Yauco
 <script>
 function mostrarMunicipio(municipio) {
   if (municipio === "Adjuntas") {
-    alert(
+    function mostrarMunicipio(municipio) {
+  if (municipio === "Adjuntas") {
+    document.getElementById("ficha-municipio").style.display = "block";
+  }
+}
+
+function cerrarFicha() {
+  document.getElementById("ficha-municipio").style.display = "none";
+}
       "ADJUNTAS\n\n" +
       "Información municipal del Partido Puerto Rico Florece.\n\n" +
       "Aquí presentaremos próximamente los proyectos, necesidades, prioridades, infraestructura, desarrollo económico y oportunidades de participación ciudadana de Adjuntas."
