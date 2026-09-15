@@ -190,7 +190,7 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
 
   <div class="municipios-grid">
    <button onclick="mostrarMunicipio('Adjuntas')">Adjuntas</button>
-Aguada
+<button onclick="mostrarMunicipio('Aguada')">Aguada</button>
 Aguadilla
 Aguas Buenas
 Aibonito
@@ -294,6 +294,8 @@ Yauco
 
     <button class="cerrar-ficha" onclick="cerrarFicha()">✕ Cerrar ficha</button>
 
+    
+
     <h2>📍 ADJUNTAS</h2>
     <p class="subtitulo-ficha">Ciudad del Gigante Dormido</p>
 
@@ -345,13 +347,23 @@ Yauco
 
 <script>
 function mostrarMunicipio(municipio) {
+
   if (municipio === "Adjuntas") {
     document.getElementById("ficha-municipio").style.display = "block";
   }
+
+  if (municipio === "Aguada") {
+    document.getElementById("ficha-aguada").style.display = "block";
+  }
+
 }
 
 function cerrarFicha() {
   document.getElementById("ficha-municipio").style.display = "none";
+}
+
+function cerrarFichaAguada() {
+  document.getElementById("ficha-aguada").style.display = "none";
 }
 </script>
 
