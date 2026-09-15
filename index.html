@@ -67,20 +67,34 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
   padding: 35px;
   box-shadow: 0 15px 50px rgba(0,0,0,0.35);
   border-top: 8px solid #e50083;
+  color: #24133f;
 }
 
 .ficha-contenido h2 {
-  color: #4d1795;
+  color: #24133f;
   font-size: 34px;
   margin-bottom: 5px;
 }
+  
+  .ficha-bloque p {
+  color: #24133f;
+  line-height: 1.6;
+}
+  .ficha-bloque {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 
+    .ficha-agenda {
+      
+    
 .subtitulo-ficha {
   color: #e50083;
   font-size: 20px;
   font-weight: bold;
   margin-top: 0;
 }
+  
 
 .cerrar-ficha {
   float: right;
@@ -341,7 +355,7 @@ function mostrarMunicipio(municipio) {
 }
 
 function cerrarFicha() {
-  document.getElementById("ficha-municipio").style.display = "none";
+  document.getElementById("ficha-municipio")display: none !important;
 }
 </script>
 
