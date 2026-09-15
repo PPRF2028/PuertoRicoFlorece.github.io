@@ -354,7 +354,13 @@ Yauco
     </div>
   </div>
 </div>
- <script>
-function mostrarMunicipio(municipio) {
+ function mostrarMunicipio(municipio) {
   if (municipio === "Adjuntas") {
-    alert("ADJUNTAS\n\nCiudad del Gigante Dormido\n\nInformación municipal del Partido Puerto Rico Florece.");
+    document.getElementById("ficha-municipio").style.display = "block";
+  }
+}
+
+function cerrarFicha() {
+  document.getElementById("ficha-municipio").style.display = "none";
+}
+<script>
