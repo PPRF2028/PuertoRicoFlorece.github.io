@@ -407,7 +407,10 @@ function mostrarMunicipio(municipio) {
   if (municipio === "Aguada") {
     document.getElementById("ficha-aguada").style.display = "block";
   }
-
+  
+if (municipio === "Aguadilla") {
+    document.getElementById("ficha-aguadilla").style.display = "block";
+  }
 }
 
 function cerrarFicha() {
@@ -418,6 +421,10 @@ function cerrarFichaAguada() {
   document.getElementById("ficha-aguada").style.display = "none";
 }
 
+  function cerrarFichaAguadilla() {
+  document.getElementById("ficha-aguadilla").style.display = "none";
+}
+  
 <div id="ficha-aguadilla" class="ficha-municipio">
   <div class="ficha-contenido">
 
