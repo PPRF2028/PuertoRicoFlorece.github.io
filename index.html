@@ -347,8 +347,8 @@ Yauco
     <div id="ficha-municipio" class="ficha-municipio">
       <div class="ficha-contenido">
     
-    <button class="cerrar-ficha" onclick="cerrarFicha()">✕ Cerrar ficha</button>
-
+    <button class="cerrar-ficha" onclick="document.getElementById('ficha-municipio').style.display='none'">✕ Cerrar ficha</button>
+        
     <h2>📍 ADJUNTAS</h2>
     <p class="subtitulo-ficha">Ciudad del Gigante Dormido</p>
 
@@ -421,7 +421,6 @@ if (municipio === "Aguadilla") {
 }
 
 function cerrarFicha() {
-}
   document.getElementById("ficha-municipio").style.display = "none";
 }
 
