@@ -1,4 +1,4 @@
-# Partido Puerto Rico Florece — sitio web inicial
+# Partido Puerto Rico Florece
 
 Archivos:
 - index.html
