@@ -1042,6 +1042,11 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
       <div class="ficha-contenido">
     
     <button class="cerrar-ficha" onclick="document.getElementById('ficha-municipio').style.display='none'">✕ Cerrar ficha</button>
+
+        <div class="escudo-municipal">
+  <img src="escudos/adjuntas.svg"
+       alt="Escudo oficial de Adjuntas">
+</div>
         
     <h2>📍 ADJUNTAS</h2>
     <p class="subtitulo-ficha">
@@ -1100,6 +1105,18 @@ function mostrarMunicipio(municipio) {
   if (municipio === "Adjuntas") {
     document.getElementById("ficha-municipio").style.display = "block";
   }
+    
+.escudo-municipal {
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.escudo-municipal img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
 
   if (municipio === "Aguada") <	La villa de Sotomayor</p>{
     document.getElementById("ficha-aguada").style.display = "block";
