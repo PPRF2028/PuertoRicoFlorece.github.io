@@ -1,4 +1,4 @@
-# Partido Puerto Rico Florece
+# PartidoPuertoRicoFlorece
 
 Archivos:
 - index.html
