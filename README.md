@@ -7,4 +7,3 @@ Archivos:
 - flor-de-maga.png
 - escudos
 - bandera
-La página está preparada como sitio estático y puede publicarse en GitHub Pages.
