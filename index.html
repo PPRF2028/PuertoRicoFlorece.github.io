@@ -8616,6 +8616,189 @@ document.querySelectorAll('.ficha-municipio').forEach(function(ficha) {
   ficha.style.display = 'none';
 });
 </script>
+
+<!-- ======================================
+     BUSCADOR DE LA BIBLIOTECA DIGITAL PPRF
+     ====================================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const biblioteca = document.getElementById("documentos");
+
+    if (!biblioteca) return;
+
+    const titulo = biblioteca.querySelector("h2.title");
+
+    if (!titulo) return;
+
+    const tarjetas = Array.from(
+        biblioteca.querySelectorAll("article.card")
+    );
+
+    if (!tarjetas.length) return;
+
+    const buscador = document.createElement("div");
+    buscador.className = "biblioteca-buscador";
+
+    buscador.innerHTML = `
+        <input
+            type="search"
+            id="buscarDocumentosPPRF"
+            placeholder="🔎 Buscar documentos, propuestas, manuales..."
+            aria-label="Buscar en la Biblioteca Digital"
+        >
+    `;
+
+    const categorias = [
+        "Todas",
+        "Gobierno",
+        "Seguridad",
+        "Salud",
+        "Educación",
+        "Economía",
+        "Agricultura",
+        "Ambiente",
+        "Justicia",
+        "Cultura",
+        "Organización",
+        "Manuales",
+        "Otros"
+    ];
+
+    const filtros = document.createElement("div");
+    filtros.className = "biblioteca-categorias";
+
+    categorias.forEach(function (categoria) {
+
+        const boton = document.createElement("button");
+
+        boton.type = "button";
+        boton.textContent = categoria;
+
+        if (categoria === "Todas") {
+            boton.classList.add("activa");
+        }
+
+        boton.addEventListener("click", function () {
+
+            categoriaActiva = categoria;
+
+            filtros.querySelectorAll("button").forEach(function (b) {
+                b.classList.remove("activa");
+            });
+
+            boton.classList.add("activa");
+
+            filtrarDocumentos();
+        });
+
+        filtros.appendChild(boton);
+    });
+
+    const contador = document.createElement("div");
+    contador.className = "biblioteca-contador";
+
+    const mensaje = document.createElement("p");
+    mensaje.textContent = "No se encontraron documentos.";
+    mensaje.style.display = "none";
+    mensaje.style.textAlign = "center";
+    mensaje.style.color = "#542080";
+
+    mensaje.id = "bibliotecaSinResultados";
+
+    titulo.insertAdjacentElement("afterend", buscador);
+    buscador.insertAdjacentElement("afterend", filtros);
+    filtros.insertAdjacentElement("afterend", contador);
+    contador.insertAdjacentElement("afterend", mensaje);
+
+    const entrada = document.getElementById("buscarDocumentosPPRF");
+
+    let categoriaActiva = "Todas";
+
+    function obtenerCategoria(texto) {
+
+        const t = texto.toLowerCase();
+
+        if (/seguridad|policía|bomberos|defensa|crisis/.test(t))
+            return "Seguridad";
+
+        if (/salud|hospital|médic|sanitari|mental/.test(t))
+            return "Salud";
+
+        if (/educación|docente|escuela|estudiantil/.test(t))
+            return "Educación";
+
+        if (/económ|comercio|exportaci|inversión|empleo|trabajo|vivienda/.test(t))
+            return "Economía";
+
+        if (/agricultura|agroaliment|alimentaria|rural/.test(t))
+            return "Agricultura";
+
+        if (/ambient|climát|agua|marítim|costera|sostenibilidad|recursos naturales/.test(t))
+            return "Ambiente";
+
+        if (/justicia|tribunal|fiscalía|electoral|jurídic/.test(t))
+            return "Justicia";
+
+        if (/cultura|deporte|turismo|borinqueña|poema|himno/.test(t))
+            return "Cultura";
+
+        if (/manual|reglamento|organización|estructura|ética|comunicación/.test(t))
+            return "Manuales";
+
+        if (/partido|constitución|presidencial|gobierno|administración|reforma/.test(t))
+            return "Gobierno";
+
+        return "Otros";
+    }
+
+    tarjetas.forEach(function (tarjeta) {
+
+        tarjeta.classList.add("biblioteca-tarjeta");
+
+        const texto = tarjeta.innerText || "";
+
+        tarjeta.dataset.categoria = obtenerCategoria(texto);
+    });
+
+    function filtrarDocumentos() {
+
+        const busqueda = entrada.value.toLowerCase().trim();
+
+        let visibles = 0;
+
+        tarjetas.forEach(function (tarjeta) {
+
+            const texto = tarjeta.innerText.toLowerCase();
+
+            const coincideTexto = texto.includes(busqueda);
+
+            const coincideCategoria =
+                categoriaActiva === "Todas" ||
+                tarjeta.dataset.categoria === categoriaActiva;
+
+            const mostrar = coincideTexto && coincideCategoria;
+
+            tarjeta.style.display = mostrar ? "" : "none";
+
+            if (mostrar) visibles++;
+        });
+
+        contador.textContent =
+            visibles + (visibles === 1
+                ? " elemento encontrado"
+                : " elementos encontrados");
+
+        mensaje.style.display = visibles === 0 ? "block" : "none";
+    }
+
+    entrada.addEventListener("input", filtrarDocumentos);
+
+    filtrarDocumentos();
+
+});
+</script>  
   
 </body>
 </html>
