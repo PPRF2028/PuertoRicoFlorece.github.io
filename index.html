@@ -152,6 +152,88 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
   }
 }
 </style>
+
+  /* ORGANIGRAMA INSTITUCIONAL */
+
+.organigrama-institucional {
+  margin: 35px auto;
+  padding: 30px 20px;
+  max-width: 1000px;
+  background: #fff;
+  border: 2px solid #f2d5e8;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(80, 20, 65, 0.08);
+  text-align: center;
+}
+
+.organigrama-institucional h3 {
+  color: var(--pink);
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.org-nivel {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.org-caja {
+  background: #fff0f7;
+  color: #572044;
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  padding: 16px 22px;
+  font-weight: 800;
+  max-width: 360px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.org-principal {
+  background: #b90055;
+  color: #fff;
+  border-color: #b90055;
+}
+
+.org-direccion {
+  background: #f5d6e8;
+  color: #572044;
+}
+
+.org-area {
+  background: #ffe8f2;
+}
+
+.org-conector {
+  width: 3px;
+  height: 28px;
+  background: var(--pink);
+  margin: 0 auto;
+}
+
+.org-nota {
+  color: #766477;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  .organigrama-institucional {
+    padding: 22px 12px;
+  }
+
+  .org-nivel {
+    gap: 10px;
+  }
+
+  .org-caja {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+  
 </head>
 <body>
 <div class="top">Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.</div>
@@ -289,6 +371,71 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
 
   <h2 class="title">👥 Estructura Organizacional del Partido</h2>
 
+<div class="organigrama-institucional">
+
+  <h3>Organigrama General</h3>
+
+  <div class="org-nivel">
+    <div class="org-caja org-principal">
+      🏛️ Asamblea General
+    </div>
+  </div>
+
+  <div class="org-conector"></div>
+
+  <div class="org-nivel">
+    <div class="org-caja org-direccion">
+      ⚖️ Consejo Nacional de Dirección
+    </div>
+  </div>
+
+  <div class="org-conector"></div>
+
+  <div class="org-nivel org-doble">
+    <div class="org-caja">
+      🇵🇷 Presidencia
+    </div>
+    <div class="org-caja">
+      Vicepresidencias
+    </div>
+  </div>
+
+  <div class="org-conector"></div>
+
+  <div class="org-nivel org-doble">
+    <div class="org-caja">
+      📋 Secretaría General
+    </div>
+    <div class="org-caja">
+      💼 Tesorería
+    </div>
+  </div>
+
+  <div class="org-conector"></div>
+
+  <div class="org-nivel">
+    <div class="org-caja org-area">
+      🌺 Direcciones Nacionales y Comisiones Permanentes
+    </div>
+  </div>
+
+  <div class="org-conector"></div>
+
+  <div class="org-nivel org-doble">
+    <div class="org-caja">
+      🏘️ Comités Municipales
+    </div>
+    <div class="org-caja">
+      🤝 Comités Comunitarios
+    </div>
+  </div>
+
+  <p class="org-nota">
+    Representación gráfica de la estructura organizacional institucional.
+  </p>
+
+</div>
+   
   <p class="lead" style="text-align:center;max-width:900px;margin:0 auto 30px;">
     El Partido Puerto Rico Florece contará con una estructura institucional
     organizada para promover la dirección, coordinación, administración
