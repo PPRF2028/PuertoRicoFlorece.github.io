@@ -454,53 +454,256 @@ footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlo
       </p>
     </article>
 
-    <section id="organigrama-nacional" class="section">
-  <h2>🏛️ Organigrama General Nacional</h2>
+   <style>
+.organigrama {
+  text-align: center;
+  padding: 35px 15px;
+}
 
-  <p>
-    Estructura institucional del Partido Puerto Rico Florece.
-  </p>
+.organigrama h2 {
+  color: var(--pink);
+  font-size: 30px;
+  margin-bottom: 12px;
+}
 
-  <div class="tile">
+.org-nivel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.org-caja {
+  background: white;
+  border: 2px solid #e91e63;
+  border-radius: 14px;
+  padding: 18px;
+  width: 230px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.10);
+  color: #333;
+  position: relative;
+}
+
+.org-caja h3 {
+  color: #d4145a;
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.org-caja p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.org-principal {
+  background: #d4145a;
+  border-color: #d4145a;
+  color: white;
+  width: 280px;
+}
+
+.org-principal h3 {
+  color: white;
+}
+
+.org-conector {
+  width: 2px;
+  height: 28px;
+  background: #d4145a;
+  margin: auto;
+}
+
+.org-separador {
+  width: 80%;
+  height: 2px;
+  background: #d4145a;
+  margin: 0 auto 20px;
+}
+
+@media(max-width:600px) {
+  .org-caja {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .organigrama h2 {
+    font-size: 24px;
+  }
+}
+</style>
+
+<section id="organigrama-nacional" class="organigrama">
+
+<h2>🏛️ Organigrama General Nacional</h2>
+
+<p>
+Estructura institucional y organizativa del
+Partido Puerto Rico Florece.
+</p>
+
+<div class="org-nivel">
+  <div class="org-caja org-principal">
     <h3>Presidencia Nacional</h3>
-    <p>Máxima dirección ejecutiva del Partido.</p>
+    <p>Dirección ejecutiva y representación institucional del Partido.</p>
   </div>
+</div>
 
-  <div class="tile">
-    <h3>Vicepresidencias Nacionales</h3>
+<div class="org-conector"></div>
+
+<div class="org-nivel">
+  <div class="org-caja">
+    <h3>Primera Vicepresidencia</h3>
     <p>Apoyo y coordinación de la dirección nacional.</p>
   </div>
 
-  <div class="tile">
+  <div class="org-caja">
+    <h3>Segunda Vicepresidencia</h3>
+    <p>Colaboración y continuidad de las funciones directivas.</p>
+  </div>
+</div>
+
+<div class="org-conector"></div>
+
+<div class="org-nivel">
+  <div class="org-caja org-principal">
     <h3>Junta Directiva Nacional</h3>
-    <p>Dirección, coordinación y supervisión institucional.</p>
+    <p>Coordinación, dirección y supervisión institucional.</p>
   </div>
+</div>
 
-  <div class="tile">
+<div class="org-conector"></div>
+
+<div class="org-separador"></div>
+
+<div class="org-nivel">
+
+  <div class="org-caja">
     <h3>Secretaría General</h3>
-    <p>Administración y coordinación organizacional.</p>
+    <p>Administración, documentación y coordinación organizacional.</p>
   </div>
 
-  <div class="tile">
-    <h3>Secretarías Especializadas</h3>
-    <p>Educación, economía, organización, comunicaciones,
-    asuntos municipales y política pública.</p>
+  <div class="org-caja">
+    <h3>Tesorería Nacional</h3>
+    <p>Administración financiera y fiscalización de los recursos.</p>
   </div>
 
-  <div class="tile">
-    <h3>Comisiones Nacionales</h3>
-    <p>Ética, disciplina, fiscalización y transparencia.</p>
+  <div class="org-caja">
+    <h3>Consejo Político Nacional</h3>
+    <p>Análisis estratégico y asesoramiento institucional.</p>
   </div>
 
-  <div class="tile">
-    <h3>Organización Municipal</h3>
-    <p>Directorios y comités de los 78 municipios de Puerto Rico.</p>
+</div>
+
+<div class="org-separador"></div>
+
+<h2>Secretarías Especializadas</h2>
+
+<div class="org-nivel">
+
+  <div class="org-caja">
+    <h3>Organización</h3>
+    <p>Desarrollo y fortalecimiento de las estructuras del Partido.</p>
   </div>
 
-  <div class="tile">
-    <h3>Participación Ciudadana</h3>
-    <p>Jóvenes, mujeres, profesionales y organizaciones comunitarias.</p>
+  <div class="org-caja">
+    <h3>Educación</h3>
+    <p>Política educativa y formación ciudadana.</p>
   </div>
+
+  <div class="org-caja">
+    <h3>Desarrollo Económico</h3>
+    <p>Propuestas económicas y desarrollo productivo.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Asuntos Municipales</h3>
+    <p>Coordinación de los 78 municipios.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Comunicaciones</h3>
+    <p>Imagen institucional y comunicación pública.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Política Pública</h3>
+    <p>Desarrollo y evaluación de propuestas nacionales.</p>
+  </div>
+
+</div>
+
+<div class="org-separador"></div>
+
+<h2>Comisiones Nacionales</h2>
+
+<div class="org-nivel">
+
+  <div class="org-caja">
+    <h3>Ética y Disciplina</h3>
+    <p>Integridad, cumplimiento y responsabilidad institucional.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Fiscalización y Transparencia</h3>
+    <p>Supervisión y rendición de cuentas.</p>
+  </div>
+
+</div>
+
+<div class="org-separador"></div>
+
+<h2>Organización Territorial</h2>
+
+<div class="org-nivel">
+
+  <div class="org-caja">
+    <h3>Directorios Municipales</h3>
+    <p>Representación organizativa en los 78 municipios.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Comités Municipales</h3>
+    <p>Organización y participación local.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Coordinadores Comunitarios</h3>
+    <p>Vinculación con barrios y comunidades.</p>
+  </div>
+
+</div>
+
+<div class="org-separador"></div>
+
+<h2>Participación Ciudadana</h2>
+
+<div class="org-nivel">
+
+  <div class="org-caja">
+    <h3>Organización de Jóvenes</h3>
+    <p>Liderazgo y participación juvenil.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Organización de Mujeres</h3>
+    <p>Participación y desarrollo de liderazgos.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Consejo de Profesionales</h3>
+    <p>Conocimiento y asesoramiento especializado.</p>
+  </div>
+
+  <div class="org-caja">
+    <h3>Organizaciones Comunitarias</h3>
+    <p>Participación y colaboración ciudadana.</p>
+  </div>
+
+</div>
+
 </section>
 
     \<article class="tile">   \<h3>🏛️ Organigrama General Nacional\</h3>
